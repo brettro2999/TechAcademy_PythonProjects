@@ -23,7 +23,7 @@ with conn:
     for tFile in fileList:
         if tFile.endswith(".txt"):
             cur.execute("INSERT INTO tbl_txtFiles(file_name) VALUES (?)", \
-                        (tFile))
+                        (tFile,))
     conn.commit()
 conn.close()
 
@@ -32,7 +32,5 @@ conn = sqlite3.connect('list.db')
 with conn:
     cur = conn.cursor()
     cur.execute("SELECT file_name FROM tbl_txtFiles")
-    varTxt = cur.fetchall()
-    for item in varTxt:
-        files = "() \n()".format(item[0],item[1])
+    files = cur.fetchall()
     print(files)

@@ -16,8 +16,8 @@ class User:
 
 class Teacher(User):
         teach_id = ""
-        full_name = ""
-        password = ""
+        classes = ""
+        room_num = ""
 
         def checkGrade(self):
             enterTeach_id = input("Enter Teacher ID: ")
@@ -30,8 +30,8 @@ class Teacher(User):
 
 class Student(User):
         student_id = ""
-        full_name = ""
-        password = ""
+        grade_level = ""
+        grad_year = ""
 
         def checkGrade(self):
             enterStu_id = input("Enter Student ID: ")

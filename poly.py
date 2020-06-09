@@ -9,7 +9,7 @@ class User:
         enter_id = input("Enter ID: ")
         enter_fullName = input("Enter Full Name: ")
         enter_password = input("Password: ")
-        if (enter_id == self.id and enter_password == self.password):
+        if (enter_id == self.id_num and enter_password == self.password):
             print("Grades for {}:".format(enter_fullName))
         else:
             print("Incorrect credentials.")
@@ -23,7 +23,7 @@ class Teacher(User):
             enterTeach_id = input("Enter Teacher ID: ")
             enter_fullName = input("Enter Full Name: ")
             enter_password = input("Password: ")
-            if (enterTeach_id == self.id and enter_password == self.password):
+            if (enterTeach_id == self.teach_id and enter_password == self.password):
                 print("Grades for {}:".format(enter_fullName))
             else:
                 print("Incorrect credentials.")
@@ -37,7 +37,7 @@ class Student(User):
             enterStu_id = input("Enter Student ID: ")
             enter_fullName = input("Enter Full Name: ")
             enter_password = input("Password: ")
-            if (enterStu_id == self.id and enter_password == self.password):
+            if (enterStu_id == self.student_id and enter_password == self.password):
                 print("Grades for {}:".format(enter_fullName))
             else:
                 print("Incorrect credentials.")
